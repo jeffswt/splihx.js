@@ -137,3 +137,29 @@ var change_zoom_anim = function(dir, begin, cur, targ) {
     }, 10);
     return ;
 }
+var change_zoom = function(frm, to) {
+    dir = frm < to;
+    change_zoom_func(frm);
+    change_zoom_anim(dir, frm, frm, to);
+    return ;
+}
+var zoom_in = function() {
+    if (!zoom_available)
+        return ;
+    if (zoom_level <= 0)
+        return ;
+    zoom_level -= 1;
+    zoom_available = false;
+    change_zoom(zoom_level + 1, zoom_level);
+    return ;
+}
+var zoom_out = function() {
+    if (!zoom_available)
+        return ;
+    if (zoom_level >= 4)
+        return ;
+    zoom_level += 1;
+    zoom_available = false;
+    change_zoom(zoom_level - 1, zoom_level);
+    return ;
+}
