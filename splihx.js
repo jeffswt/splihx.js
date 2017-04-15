@@ -113,3 +113,14 @@ if (force_enable_skin_customization) {
     checkShared();
 }
 
+// Make Splix see farther!
+
+var zoom_level = 1;
+var zoom_available = true;
+var change_zoom_func = function(ratio) {
+    ratio = Math.pow(2, ratio);
+    VIEWPORT_RADIUS = 15 * ratio;
+    MAX_ZOOM = 215 * ratio;
+    BLOCKS_ON_SCREEN = 550 * ratio;
+    return ;
+}
