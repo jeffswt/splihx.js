@@ -15,6 +15,8 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+var block_advertisements = false;
+
 // Display console ASCII art
 
 console.log('              :::   :::       :::     :::    ::: ::::::::::      ');
@@ -67,4 +69,30 @@ localStorage.uglyMode = true;
 // Profanity replacement
 
 swearRepl = '[Profanity]';
+
+// Advertisement blocker
+
+if (block_advertisements) {
+    getAdCounter = function() {
+        console.log('splihx.js: Blocked before-game advertisement from displaying.');
+        return 0;
+    }
+    countAd = function() {
+        lsSet("adCounter", 0);
+        return false;
+    }
+    requestCanRunAds = function() {
+        console.log('splihx.js: Blocked before-game advertisement from displaying.');
+        canRunAdsRequested = true;
+        canRunAds = false;
+        return ;
+    };
+    setUpAdBoxContent = function() {
+        return ;
+    };
+    document.getElementById('adbox').style = "display:none";
+    document.getElementById('newsbox').style = "height:0px;width:0px"; // Functions forbid "display:none", and we are using something else.
+    document.getElementById('appLinks').style = "display:none";
+    console.log('splihx.js: Blocked advertisement banner from displaying.');
+}
 
