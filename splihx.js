@@ -16,6 +16,7 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 var block_advertisements = false;
+var force_enable_skin_customization = false;
 
 // Display console ASCII art
 
@@ -94,5 +95,21 @@ if (block_advertisements) {
     document.getElementById('newsbox').style = "height:0px;width:0px"; // Functions forbid "display:none", and we are using something else.
     document.getElementById('appLinks').style = "display:none";
     console.log('splihx.js: Blocked advertisement banner from displaying.');
+}
+
+// Enabled skin customization
+
+if (force_enable_skin_customization) {
+    checkShared = function() {
+        var a = true,
+            b = a ? null : "none",
+            c = a ? "none" : null;
+        skinButtonCanvas.style.display = b;
+        skinButtonShadow.style.display = b;
+        shareToUnlock.style.display = c;
+        return ;
+    }
+    lsSet("s", 1);
+    checkShared();
 }
 
