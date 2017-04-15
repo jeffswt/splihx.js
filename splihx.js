@@ -48,3 +48,23 @@ console.log('###     ###  ########  ###     ### ########### ###    ####       ')
 console.log('=================================================================');
 console.log('                           splihx.js                             ');
 
+// Skip death transition animation
+
+skipDeathTransition = true;
+
+// Draw a white dot on my player
+
+localStorage.drawWhiteDot = true;
+
+// Display ping
+
+localStorage.drawDebug = true;
+
+// Use ugly mode
+
+localStorage.uglyMode = true;
+
+// Profanity replacement
+
+swearRepl = '[Profanity]';
+
