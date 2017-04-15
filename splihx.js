@@ -124,3 +124,16 @@ var change_zoom_func = function(ratio) {
     BLOCKS_ON_SCREEN = 550 * ratio;
     return ;
 }
+var change_zoom_anim = function(dir, begin, cur, targ) {
+    if ((dir == true && cur > targ) || (dir == false) && (cur < targ)) {
+        change_zoom_func(targ);
+        zoom_available = true;
+        return ;
+    }
+    change_zoom_func(cur);
+    cur += (targ - begin) * 0.12;
+    setTimeout(function() {
+        change_zoom_anim(dir, begin, cur, targ);
+    }, 10);
+    return ;
+}
