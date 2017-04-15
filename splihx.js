@@ -245,6 +245,31 @@ colors = {
     }
 };
 
+// Keyboard hook, hooked into main function
+
+var keydown_hook_old = null;
+var keydown_hooked = false;
+var keydown_hook = function(key) {
+    // My function goes here.
+    if (key == 90) { // Key Z
+        zoom_out();
+        return ;
+    } else if (key == 88) { // Key X
+        zoom_in();
+        return ;
+    } else if (key == 67) { // Key C
+        sendDir(4);
+        return ;
+    }
+    // Pass the stuff forwards.
+    return keydown_hook_old(key);
+};
+if (!keydown_hooked) {
+    keydown_hook_old = parseDirKey;
+    parseDirKey = keydown_hook;
+    keydown_hooked = true;
+}
+
 // Make Splix see farther!
 
 var zoom_level = 1;
