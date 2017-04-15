@@ -113,6 +113,12 @@ if (force_enable_skin_customization) {
     checkShared();
 }
 
+// Adding attribution for splihx in function loop(...). (splix.js:3322)
+eval(('' + loop)
+    .replace('Close an area to fill it with your color.', 'This <code style=\\"font-size:12pt\\"><strong>splix.io</strong></code> instance is hacked with <code style=\\"font-size:12pt\\"><strong>splihx.js</strong></code>.')
+    .replace('Don\'t get hit by other players.', '<code style=\\"font-size:12pt\\"><strong>splihx.js</strong></code> is <code style=\\"font-size:12pt\\"><strong>&lt;/&gt;</strong></code>ed with ❤ by jeffswt.')
+);
+
 // Make Splix see farther!
 
 var zoom_level = 1;
