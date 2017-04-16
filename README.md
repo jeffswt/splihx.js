@@ -4,8 +4,8 @@
 
 These functions are implemented in the project, but only those with checkboxes ticked are enabled by default, and need to be manually enabled in order to be used.
 
--   [ ] Remove full-screen and banner advertisements.
--   [ ] Forcefully enable skin changing without the need to share it on Facebook, Twitter, etc.
+-   [x] Remove full-screen and banner advertisements.
+-   [x] Forcefully enable skin changing without the need to share it on Facebook, Twitter, etc.
 -   [x] Make other players more visible by highlighting them with distinguished colours.
 -   [x] Render certain colours (pink, lime and yellow) in a way that won't blind your eyes.
 -   [x] **Add zooming functions in order to gain a wider view range of players.**
@@ -18,21 +18,35 @@ These functions are implemented in the project, but only those with checkboxes t
 
 ## Installation
 
+There are, however, a few methods of installation which we may go through with you.
+
+### Developer Console
+
 1.  Download the `splihx.js` file to your local computer or view it on GitHub.
 2.  Open the **Developer Console** in your Splix tab (This is usually `F12` for most browsers).
 3.  Copy all content in `splihx.js` to the **Developer Console** and press `Enter` to execute the script.
 4.  Your instance of Splix should be hacked by now.
 5.  If you reloaded your browser window, you may have to redo the process.
 
+### Bookmarklet
+
+1.  Drag this link to your bookmarks bar: <a href="javascript:eval('function f(){i=document.createElement(\'script\');i.src=\'//jeffswt.tk/meta/splihx.js\';document.body.append(i);}f();')">splihx.js</a>
+2.  Click the link on the bookmarks bar when in [splix.io](https://splix.io).
+3.  Your instance of Splix should be hacked by now.
+
+### Tampermonkey
+
+Because the official documentation for Tampermonkey is being abstruse to an awful extent, we decided that we are not developing an interface as a userscript for Tampermonkey. Feel free to make PRs to this project if you have interfaces.
+
 ## Notes
 
-**The current version of `splihx.js` works with `splix` v.142 only.**
+The current version of `splihx.js` works with `splix` v.142 only.
 
-In consideration of the income of the author of Splix, we decided that the automatic removal of the advertisements should not be turned on by default, although no explicit notices of such are displayed on its official website. If you really need this function due to various reasons, for instance, having certain services blocked, please turn this on manually in the script.
+<!--In consideration of the income of the author of Splix, we decided that the automatic removal of the advertisements should not be turned on by default, although no explicit notices of such are displayed on its official website. If you really need this function due to various reasons, for instance, having certain services blocked, please turn this on manually in the script.-->
 
-Also, to encourage the spread of this game, we decided that the force enabling of skin customization should not be turned on by default. This function is only intended for those lacking an open network, therefore not begin accessible to Facebook, Twitter and other services, and shall be turned on manually in the script.
+<!--Also, to encourage the spread of this game, we decided that the force enabling of skin customization should not be turned on by default. This function is only intended for those lacking an open network, therefore not begin accessible to Facebook, Twitter and other services, and shall be turned on manually in the script.-->
 
-**To Splix authors: if any part of this program infringes your rights or interests, we suggest your immediate communication with us, who shall remove related segments of this program or, if necessary, the entire project from the public domain.**
+**To Splix authors:** If any part of this program infringes your rights or interests, we suggest your immediate communication with us, who shall remove related segments of this program or, if necessary, the entire project from the public domain.
 
 ## License
 
@@ -50,4 +64,3 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ```
-
