@@ -15,8 +15,16 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-var block_advertisements = false;
-var force_enable_skin_customization = false;
+if (document.domain !== 'splix.io')
+    throw alert('Please run this script in "splix.io".');
+if (splihx_loaded)
+    throw alert('"splihx.js" should only be loaded once.');
+var splihx_loaded = true;
+alert('Congratulations!\n You\'ve made splix great again.');
+console.clear();
+
+var block_advertisements = true;
+var force_enable_skin_customization = true;
 
 // Display console ASCII art
 
