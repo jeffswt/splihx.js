@@ -30,7 +30,7 @@ There are, however, a few methods of installation which we may go through with y
 
 ### Bookmarklet
 
-1.  Drag this code to your bookmarks bar (and rename it): `javascript:eval('function f(){i=document.createElement(\'script\');i.src=\'//jeffswt.tk/meta/splihx.js\';document.body.append(i);}f();')`
+1.  Drag this code to your bookmarks bar (and rename it): `javascript:eval('function f(){i=document.createElement(\'script\');i.src=\'//jeffswt.tk/meta/splihx.js\';document.body.appendChild(i);}f();')`
 2.  Click the link on the bookmarks bar when in [splix.io](https://splix.io).
 3.  Your instance of Splix should be hacked by now.
 
